@@ -46,7 +46,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/flHistory"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flStart"
         android:background="@drawable/circular_border_background">
@@ -71,7 +71,37 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/flBmi"
+        app:layout_constraintEnd_toEndOf="@id/flBmi"
+        app:layout_constraintStart_toStartOf="@id/flBmi"/>
+    <FrameLayout
+        android:id="@+id/flHistory"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toEndOf="@id/flBmi"
+        app:layout_constraintTop_toBottomOf="@+id/flStart"
+        android:background="@drawable/circular_border_background">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_calender"
+  />
+
+
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="History"
+        android:textColor="@color/design_default_color_secondary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/flHistory"
+        app:layout_constraintEnd_toEndOf="@id/flHistory"
+        app:layout_constraintStart_toStartOf="@id/flHistory"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
